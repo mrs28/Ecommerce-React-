@@ -1,0 +1,6 @@
+.search{
+    display: flex;
+    width: 60%;
+    padding: 1rem;
+    border-color: blue;
+}
