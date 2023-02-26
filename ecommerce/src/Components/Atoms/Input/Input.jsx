@@ -2,8 +2,8 @@ import styles  from './Input.module.css';
 
 const Input = () => {
   return (
-    <div className={styles.input}>
-        <input type="text" name="search" id="" />
+    <div >
+        <input className={styles.input} type="text" name="search" placeholder="Productos" id="" />
     </div>
   )
 }

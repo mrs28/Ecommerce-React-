@@ -1,17 +1,18 @@
-// import './App.css';
 import Header from './Components/Header/Header';
-import ItemListContainer  from './Components/ItemListContainer/ItemListContainer';
-import Footer from './Components/Footer/Footer';
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
+
 
 function App() {
   return (
-    <div>
-      <Header />
-      <ItemListContainer />
-      <Footer />
+   <div>
 
-    </div>
+      <Header/>
+      <ItemListContainer tittle={"Bienvenido a Katz Petshop"}/>
+   
+    
+   </div>
   );
 }
 
 export default App;
+

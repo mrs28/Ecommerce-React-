@@ -1,0 +1,17 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageLogo {
+
+    border-radius: 50%;
+    width: 25%;
+}
+
+.tittleLogo {
+    font-size: 3rem;
+    color: white;
+    margin-left: 1rem;
+}

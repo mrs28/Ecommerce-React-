@@ -1,6 +1,12 @@
 .search{
-    display: flex;
-    width: 60%;
+    /* display: flex; */
+    /* width: 60%;
     padding: 1rem;
     border-color: blue;
+    background-color: red; */
+    border: 1px solid grey;
+    display: inline-flex;
+    padding: 0.5rem;
+    background: greenyellow;
+    align-items: center;
 }
