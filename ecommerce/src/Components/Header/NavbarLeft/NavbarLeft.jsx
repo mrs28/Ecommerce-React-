@@ -8,7 +8,7 @@ const NavbarLeft = () => {
   return (
     <div className={styles.navbarLeft}>
       {/* <Categories /> */}
-      <Logo />
+      <Logo tittle={"Katz"} />
       {/* <SearchBox /> */}
     </div>
   );
