@@ -1,10 +1,14 @@
 import styles from './CartWidget.module.css';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const CartWidget = () => {
   return (
     <div className={styles.cartWidget}>
-        <ShoppingCartIcon/>
+      <p>Carrito</p>
+      <button>Carrito</button>
+      
+      {/* <ShoppingCartIcon/> */}
      </div>
   )
 }
