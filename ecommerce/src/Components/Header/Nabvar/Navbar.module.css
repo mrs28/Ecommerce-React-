@@ -1,13 +1,13 @@
 .navbar {
     margin: auto;
-    width: 40%;
+    width: 25%;
     text-align: center;
 }
 .navbarList {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
+    width: 100%;
 }
 
 a { 

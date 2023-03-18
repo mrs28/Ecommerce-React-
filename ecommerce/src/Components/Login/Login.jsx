@@ -10,7 +10,7 @@ const Login = () => {
     <div className={styles.login}>
          <Stack direction="row" spacing={2}>
      
-      <Button className={styles.btnLogin} variant="contained" startIcon={<LoginIcon />}>
+      <Button style={ {backgroundColor:"white", color:"#308E95" } }variant="contained" startIcon={<LoginIcon />}>
         Login
       </Button>
     </Stack>

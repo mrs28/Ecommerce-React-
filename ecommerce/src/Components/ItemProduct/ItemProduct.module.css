@@ -1,0 +1,31 @@
+.cardProduct {
+    width: 25rem;
+    height: 100%;
+    padding-bottom: 1.75rem;
+    border: 3px solid #E3E3E3;
+  }
+
+  .img {
+     width: 25rem;
+     height: 380px;
+  }
+
+  .frame {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 2rem 0 2rem;
+    align-items: center;
+    
+  }
+
+  .span {
+    /* background-color: #ffffff; */
+    width: 2.2rem;
+    height: 2.2rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: var(--main-font);
+    font-weight: bold;
+    border: solid 1px red;
+  }
+  
