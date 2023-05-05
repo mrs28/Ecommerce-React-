@@ -1,12 +1,12 @@
 import styles from './NavbarRight.module.css';
 import CartWidget from '../../CartWidget/CartWidget';
-import Login from '../../Login/Login';
+import LoginWidget from '../../LoginWidget/LoginWidget';
 
 const NavbarRight = () => {
   return (
     <div className={styles.navbarRight}>
-        <Login/>
-        <CartWidget/>
+        <LoginWidget title={"Login"} />
+        <CartWidget title={"Cart"}/>
     </div>
   )
 }
