@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'; 
+import styles from './ItemListContainer.module.css'
 
 // import styles from './ItemListContainer.module.css';
 import { products } from '../../productsMock';
@@ -26,8 +27,7 @@ console.log("soy la lista productsMock: ", items)
   
 
   return (
-    <div>
-      <h1>soy itemconainr</h1>
+    <div className={styles.itemListContainer}>
     <ItemList items={items}/>
     </div>
 

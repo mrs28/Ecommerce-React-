@@ -1,0 +1,78 @@
+/*Estilos del card de producto*/
+.item {
+  width: 13rem;
+  height: 26rem;
+  font-size: 0.8rem;
+  border: 1px solid grey;
+
+  /* background-color: #F5F5F1; */
+
+  margin-bottom: 3rem;
+  margin-left: 5rem;
+}
+
+.item:hover {
+    transform: translateZ(10px) scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+    .buttonDetail {
+        display: block;
+      }
+
+     
+      
+
+}
+
+
+.figure {
+  width: 100%;
+  text-align: center;
+}
+
+.img {
+  display: block;
+  margin: auto;
+}
+
+.itemDescription {
+  padding: 0.5rem;
+}
+
+.itemDescription h3 {
+  text-align: justify;
+}
+
+.productDetail {
+  height: 4rem;
+  display: flex;
+  align-items: flex-end;
+  /* margin-top: 2rem; */
+  width: 100%;
+  text-align: center;
+}
+
+.buttonDetail {
+  padding: 0.5rem;
+  width: 100%;
+  background-color: #308e95;
+  color: white;
+  /* background-color: #ff9800; */
+  border: none;
+  display: none;
+}
+
+/* .uno {
+  width: 5rem;
+  height: 5rem;
+  background-color: blue;
+  display: flex;
+
+  align-items: flex-end;
+}
+.dos {
+  width: 1rem;
+  height: 2rem;
+
+  background-color: red;
+} */

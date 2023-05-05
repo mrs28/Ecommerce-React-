@@ -4,7 +4,7 @@ export const products = [
     title: "Matisse Castrados Salmon por 7Kg.",
     price: 190,
     stock: 80,
-    description: "Formulado para auxiliar en el control del peso al mismo tiempo, mantener la masa muscular",
+    description: "Formulado para auxiliar en el control del peso y mantener la masa muscular",
     category: "Alimento",
     img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679109079/matissegatosadultoscastradossalmo-n8739_500x_xqh4ii.jpg"
    },
@@ -19,19 +19,19 @@ export const products = [
    },
    {
     id: 3,
-    title: "N&D FELINE ADULT FRANGO E ROMA - pollo y granada x 7kg.",
+    title: "N&D FELINE gatos adultos x 7kg.",
     price: 205,
     stock: 60,
-    description: "Cuida el tratamiento urinario, tiene ingredientes de alta calidad. Libre de OMG y sólo conservantes naturales.",
+    description: "Cuida el tratamiento urinario. Libre de OMG y sólo conservantes naturales.",
     category: "Alimento",
     img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679091510/ND-FRANGO_500x_xduf8o.jpg"
    },
    {
     id: 4,
-    title: "HILLS SD contol de bolas de pelo x 1.6Kg.",
+    title: "HILLS contol bolas de pelo x 1.6Kg.",
     price: 100,
     stock: 80,
-    description: "Este alimento seco para gatos está elaborado con una mezcla de fibras naturales que permiten a su gato deshacerse cómodamente de las bolas de pelo a la vez que reduce la formación de otras nuevas.",
+    description: "Elaborado con una mezcla de fibras naturales que permiten deshacerse de las bolas de pelo",
     category: "Alimento",
     img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679092021/6-Hill_s_ScienceDiet_FelineAdultHairballControl_500x_xjhudh.jpg"
    },
@@ -56,18 +56,18 @@ export const products = [
    {
     id: 7,
     title: "Antipulgas P.I. gatos de 4 a 9kg.",
-    price: 19.90,
+    price: 19,
     stock: 80,
-    description: "INSECTICIDA - PULGUICIDA - PIOJICIDA  Dosis: 1 pipeta por animal, según peso. Intervalo entre dosis: 21 días.",
+    description: "INSECTICIDA - PULGUICIDA - PIOJICIDA  Dosis: 1 pipeta por animal, según peso. ",
     category: "Cuidado",
     img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679109408/Pigato4-9_500x_se6wg3.jpg"
    },
    {
     id: 8,
-    title: "AHARTZ GROOMER’S Shampoo para control de bolas de pelo x 440ml.",
+    title: "AHARTZ Shampoo x 440ml.",
     price: 30,
     stock: 80,
-    description: "Fórmula acondicionadora especial que ayuda a reducir las bolas de pelo al eliminar suavemente el exceso de cabello suelto y facilitar el cepillado.",
+    description: "Reduce las bolas de pelo al eliminar el exceso de cabello suelto.",
     category: "Cuidado",
     img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679093108/SHAMPOOPARAGATOSHARTZ_500x_grsif0.jpg"
    },

@@ -1,4 +1,7 @@
-.tittleContainer {
-    text-align: center;
-    font-size: 4rem;
+/*itemListContainer padre que contiene a todos los cards de p´roductos*/
+.itemListContainer {
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
 }
+
