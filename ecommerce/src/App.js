@@ -4,6 +4,7 @@ import LayoutPublic from './Components/Layout/LayoutPublic/LayoutPublic';
 import PageHome from './Pages/PageHome/PageHome';
 import Cart from './Components/Cart/Cart';
 import Login from './Components/Login/Login';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 // import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 // import ConsumiendoApis from './Components/ConsumiendoApis/ConsumiendoApis'
 
@@ -56,6 +57,14 @@ function App() {
                 </LayoutPublic>}
               />
 
+            <Route
+              path="/itemDetail/:id"
+              element={
+                <LayoutPublic>
+                  <ItemDetailContainer/>
+                </LayoutPublic>}
+              />
+
             <Route 
               path="*" 
               element={<h1> error 404: Not found </h1>} 
@@ -102,4 +111,5 @@ export default App;
 
 //Componente Padre - hijo 
 //ItemListContainer - ItemList
+//El path de ItemDetailContainer recibe una ruta dinámica
 

@@ -6,7 +6,9 @@ export const products = [
     stock: 80,
     description: "Formulado para auxiliar en el control del peso y mantener la masa muscular",
     category: "Alimento",
-    img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679109079/matissegatosadultoscastradossalmo-n8739_500x_xqh4ii.jpg"
+    img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679109079/matissegatosadultoscastradossalmo-n8739_500x_xqh4ii.jpg",
+    details:"Alimento completo para gatos adultos castrados.Libre de granos y libre de gluten. 100% proteína animal de pollo.",
+    composition:"Composición:Carne de pollo deshidratada, tapioca, guisantes, proteína de pollo hidrolizada, levadura y extracto de levadura-Saccharomyces cerevisiae (Fuente de mananooligosacáridos – MOS y β-glucanos), grasa de ave (Fuente de ac. grasos Ω-6), hígado de pollo hidrolizado, proteína de patata, celulosa natural (Fuente de fibra insoluble), boniato, aceite de pescado (Fuente de ac. grasos Ω-3-EPA y DHA), pulpa de remolacha, vaina de algarroba, huevo entero deshidratado, minerales, Inulina (Fibra soluble de achicoria, fuente fosfooligosacáridos – FOS), fibra dietética soluble extraída de Plantago ovata, aceites esenciales (orégano, canela, clavo, tomillo, romero, hierba buena, té verde), yucca, hidrolizado de crustáceos (Fuente de Glucosamina), hidrolizado de cartílago (Fuente de Condroitina), concentrado de zumo de melón liofilizado (Rico en superoxido dismutasa – SOD)."
    },
    {
     id: 2,

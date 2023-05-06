@@ -1,0 +1,44 @@
+.itemDetail {
+    display: flex;
+    /* background-color: red; */
+}
+
+.itemDetailDescription {
+    /* flex-direction: column;
+    align-items: center; */
+    text-align: center;
+    width: 40%;
+}
+
+.ItemDetailAddProduct{
+    width: 60%;
+    background-color: aqua;
+}
+
+/*padre slider*/
+.sliderBox {
+    padding: 0.5rem;
+    display: inline-block;
+    width: 80%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.slider {
+    width: 100%;
+}
+
+.sliderImg {
+    border: 1.5px solid #308e95;
+    border-radius: 8%;
+}
+
+.accordionTitle {
+    margin-bottom: 1rem;
+ 
+}
+.accordionBox, .sliderBox {
+    margin-top: 2.5rem;
+}

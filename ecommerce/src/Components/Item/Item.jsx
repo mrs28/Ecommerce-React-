@@ -1,4 +1,6 @@
+// import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import styles from "./Item.module.css";
+import { Link } from "react-router-dom";
 
 const Item = ({ item }) => {
   return (
@@ -15,9 +17,13 @@ const Item = ({ item }) => {
         <h2>{item.title}</h2>
         <h4>{item.description}</h4>
         <h2>S/.{item.price}</h2>
-        <div className={styles.productDetail}>
-          <button className={styles.buttonDetail}>Ver Producto</button>
-        </div>
+        {/* <Link to="/itemDetail" element={ItemDetailContainer}> */}
+        {/* RUTA DINÁMICA */}
+        <Link to={`/itemDetail/${item.id}`}>
+          <div className={styles.productDetail}>
+            <button className={styles.buttonDetail}>Ver Producto</button>
+          </div>
+        </Link>
       </div>
     </div>
   );
@@ -26,3 +32,4 @@ const Item = ({ item }) => {
 export default Item;
 //Padre-hijo
 //ItemList-Item
+//El botón Ver producto me lleva al componente ItemDetailContainer

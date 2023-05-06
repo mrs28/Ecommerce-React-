@@ -29,6 +29,8 @@ console.log("soy la lista productsMock: ", items)
   return (
     <div className={styles.itemListContainer}>
     <ItemList items={items}/>
+
+    
     </div>
 
 

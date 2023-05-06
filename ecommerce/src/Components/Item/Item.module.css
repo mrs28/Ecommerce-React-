@@ -1,4 +1,4 @@
-/*Estilos del card de producto*/
+/*Item renderiza el card del producto*/
 .item {
   width: 13rem;
   height: 26rem;
@@ -12,18 +12,13 @@
 }
 
 .item:hover {
-    transform: translateZ(10px) scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transform: translateZ(10px) scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 
-    .buttonDetail {
-        display: block;
-      }
-
-     
-      
-
+  .buttonDetail {
+    display: block;
+  }
 }
-
 
 .figure {
   width: 100%;
