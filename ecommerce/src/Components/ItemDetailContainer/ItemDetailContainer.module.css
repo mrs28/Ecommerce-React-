@@ -7,12 +7,12 @@
     /* flex-direction: column;
     align-items: center; */
     text-align: center;
-    width: 40%;
+    width: 55%;
 }
 
 .ItemDetailAddProduct{
-    width: 60%;
-    background-color: aqua;
+    width: 45%;
+    /* background-color: aqua; */
 }
 
 /*padre slider*/
@@ -35,10 +35,26 @@
     border-radius: 8%;
 }
 
-.accordionTitle {
+/* .accordionTitle {
     margin-bottom: 1rem;
- 
+} */
+
+.accordionBox {
+    width: 90%;
 }
 .accordionBox, .sliderBox {
     margin-top: 2.5rem;
+}
+
+.delivery {
+    width: 75%;
+    height: 5rem;
+  
+}
+
+.shipping {
+    width: 50%;
+    /* padding: 2rem; */
+    display: flex;
+    justify-content: space-between;
 }

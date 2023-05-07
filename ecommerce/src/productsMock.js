@@ -2,7 +2,7 @@ export const products = [
    {
     id: 1,
     title: "Matisse Castrados Salmon por 7Kg.",
-    price: 190,
+    price: 190.00,
     stock: 80,
     description: "Formulado para auxiliar en el control del peso y mantener la masa muscular",
     category: "Alimento",

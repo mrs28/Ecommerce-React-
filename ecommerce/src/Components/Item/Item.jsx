@@ -16,7 +16,7 @@ const Item = ({ item }) => {
       <div className={styles.itemDescription}>
         <h2>{item.title}</h2>
         <h4>{item.description}</h4>
-        <h2>S/.{item.price}</h2>
+        <h2>{`S/ ${item.price}`}</h2>
         {/* <Link to="/itemDetail" element={ItemDetailContainer}> */}
         {/* RUTA DINÁMICA */}
         <Link to={`/itemDetail/${item.id}`}>

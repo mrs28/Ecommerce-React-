@@ -1,1 +1,64 @@
+.itemCount {
 
+    width: 80%;
+    font-size: 600;
+    margin-top: 2rem;
+    /* background-color: green; */
+}
+
+/* padre de los btn de suma y resta y botón agregar */
+.countItemBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid  #308E95;
+    /* background-color: red; */
+}
+
+.countItem {
+ width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.addCartButton {
+    width: 70%;
+    background-color: #308E95;
+    color: white;
+    font-size: x-large;
+    border: none;
+    /* border: 1px solid  #308E95; */
+}
+
+
+ .buyButton {
+    width: 100%;
+    
+}
+
+
+.addCartButton, .countItem, .itemCount, .buyButton{
+    height: 3.5rem;
+}
+button {
+    border: none;
+}
+
+
+
+.buyButton {
+    margin-top: 3rem;
+   border: none;
+    background-color: #ff9800;
+    color: white;
+    font-size: x-large;
+
+}
+
+.icon {
+    background-color: #308E95;
+    color: white;
+}
