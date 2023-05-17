@@ -1,14 +1,15 @@
 /*Item renderiza el card del producto*/
 .item {
   width: 13rem;
-  height: 26rem;
+  height: 27rem;
   font-size: 0.8rem;
   border: 1px solid grey;
+
 
   /* background-color: #F5F5F1; */
 
   margin-bottom: 3rem;
-  margin-left: 5rem;
+  margin-left: 3rem;
 }
 
 .item:hover {
@@ -19,6 +20,7 @@
     display: block;
   }
 }
+
 
 .figure {
   width: 100%;
@@ -38,6 +40,9 @@
   text-align: justify;
 }
 
+.description {
+  margin: 0.5rem 0 0.5rem 0;
+}
 .productDetail {
   height: 4rem;
   display: flex;

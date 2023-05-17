@@ -1,60 +1,100 @@
 .itemDetail {
-    display: flex;
-    /* background-color: red; */
+  display: flex;
+  /* background-color: red; */
 }
 
-.itemDetailDescription {
-    /* flex-direction: column;
+.itemDetailImage {
+  /* flex-direction: column;
     align-items: center; */
-    text-align: center;
-    width: 55%;
+  text-align: center;
+  width: 35%;
 }
 
-.ItemDetailAddProduct{
-    width: 45%;
-    /* background-color: aqua; */
+.ItemDetailProduct {
+    padding: 0.5rem;
+  width: 35%;
+  /* background-color: gray; */
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
 }
 
+.ItemAddProductCart {
+  width: 30%;
+}
+
+/*Columna izquierda*/
 /*padre slider*/
 .sliderBox {
-    padding: 0.5rem;
-    display: inline-block;
-    width: 80%;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+  padding: 0.5rem;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+ 
 }
 
-
 .slider {
-    width: 100%;
+  width: 80%;
+  margin: auto;
 }
 
 .sliderImg {
-    border: 1.5px solid #308e95;
-    border-radius: 8%;
+  border: 1.5px solid #308e95;
+  border-radius: 8%;
 }
 
-/* .accordionTitle {
-    margin-bottom: 1rem;
-} */
+/****** COLUMNA CENTRO ******/
+
+.ItemAboutPrice {
+ padding: 0.5rem;
+  border-bottom: solid 0.5px grey;
+  height: 35%;
+  width: 90%;
+  /* background-color: blue; */
+}
+
+.ItemAboutProduct {
+    padding: 0.5rem;
+  /* border-bottom: solid 1px grey; */
+  height: 35%;
+  width: 90%;
+  padding-top: 1.5rem;
+}
+
+.ItemAboutShipping {
+  padding: 0.5rem;
+  height: 30%;
+  padding-top: 2rem;
+  /* background-color: aqua; */
+}
 
 .accordionBox {
-    width: 90%;
-}
-.accordionBox, .sliderBox {
-    margin-top: 2.5rem;
-}
-
-.delivery {
-    width: 75%;
-    height: 5rem;
+  width: 100%;
   
 }
 
-.shipping {
-    width: 50%;
-    /* padding: 2rem; */
+.accordionBox,
+.sliderBox {
+  margin-top: 2rem;
+}
+
+.delivery {
+  width: 75%;
+  height: 5rem;
+  padding-top: 3rem;
+} 
+
+ .shipping {
+  width: 70%;
+  padding: 0 0 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  
+} 
+
+/*Columna derecha*/
+.stock {
     display: flex;
-    justify-content: space-between;
 }

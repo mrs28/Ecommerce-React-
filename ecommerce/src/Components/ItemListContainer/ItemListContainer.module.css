@@ -1,6 +1,6 @@
 /*itemListContainer componente padre que renderiza a ItemList, el cual contiene a todos los cards de productos*/
 .itemListContainer {
-    padding: 3rem;
+    padding: 1.5rem;
     display: flex;
     flex-wrap: wrap;
 }

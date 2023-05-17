@@ -11,12 +11,16 @@ ul {
   list-style: none;
 }
 
-/* html {
-  font-size: 62.5%;
-} */
+ /* html {
+  /* font-size: 16px; */
+  /* font-size: 62.5%; */
+
+/*/
+https://mui.com/material-ui/customization/typography/#font-size
+*/
 
 body {
-  /* font-size: 1.3rem; */
+  font-size: 1.3rem;
   color: black;
   background-color: beige;
   /* background-color: #308E95; */

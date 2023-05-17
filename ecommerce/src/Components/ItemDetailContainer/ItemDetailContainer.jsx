@@ -1,7 +1,13 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+// import '@fontsource/roboto/300.css';
+// import '@fontsource/roboto/400.css';
+// import '@fontsource/roboto/500.css';
+// import '@fontsource/roboto/700.css';
 
+// import CssBaseline from '@mui/material/CssBaseline';
+import Typography from "@mui/material/Typography";
 import styles from "./ItemDetailContainer.module.css";
 import { useParams } from "react-router-dom";
 import { products } from "../../productsMock";
@@ -10,21 +16,24 @@ import ItemCount from "../ItemCount/ItemCount";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 // import ScheduleIcon from '@mui/icons-material/Schedule';
 
+
+
 const ItemDetailContainer = () => {
   // Desestructuro useParams()
   const { id } = useParams();
   console.log("soy id", id); //id llega como un string
 
-  //al array preoducts
+  //al array products
   const idProductSelected = products.find(
-    (product) => product.id === Number(id)
+    (product) => product.id === Number(id) //usae comprador estricto
   ); //product.id llega como number por eso convierto el string id en Number
   console.log(idProductSelected);
 
   return (
-    <div className={styles.itemDetail}>
-      {/* <h1>aquiii</h1> */}
-      <div className={styles.itemDetailDescription}>
+
+      <div className={styles.itemDetail}>
+      {/* Columna izquierda  */}
+      <div className={styles.itemDetailImage}>
         <figure className={styles.figure}>
           <img
             src={idProductSelected.img}
@@ -47,8 +56,8 @@ const ItemDetailContainer = () => {
                 className={styles.sliderImg}
                 src={idProductSelected.img}
                 alt="foto1"
-                width={140}
-                height={140}
+                width={120}
+                height={120}
               />
             </div>
             <div>
@@ -56,8 +65,8 @@ const ItemDetailContainer = () => {
                 className={styles.sliderImg}
                 src={idProductSelected.img}
                 alt="foto2"
-                width={140}
-                height={140}
+                width={120}
+                height={120}
               />
             </div>
             <div>
@@ -65,46 +74,86 @@ const ItemDetailContainer = () => {
                 className={styles.sliderImg}
                 src={idProductSelected.img}
                 alt="foto3"
-                width={140}
-                height={140}
+                width={120}
+                height={120}
               />
             </div>
           </Slider>
         </div>
-
-        <div className={styles.accordionBox}>
-          {/* <h2 className={styles.accordionTitle}>Sobre este producto</h2> */}
-          <SimpleAccordion idProductSelected={idProductSelected} />
-        </div>
       </div>
 
-      <div className={styles.ItemDetailAddProduct}>
-        <h2>{idProductSelected.title}</h2>
-        <h2>{idProductSelected.category}</h2>
-        <h2>{idProductSelected.stock}</h2>
-        <br />
-        <h3>{`Precio total: S/ ${idProductSelected.price}`}</h3>
-        <br />
-        <br />
-        <div className={styles.delivery}>
+      {/* Columna centro  */}
+      <div className={styles.ItemDetailProduct}>
+        <div className={styles.ItemAboutPrice}>
+          <Typography fontWeight="Light" color="grey" variant="h6" component="h1">
+            {idProductSelected.category}
+          </Typography>
           
-          <div className={styles.shipping}>
-            <span>
-              {" "}
-              <LocalShippingIcon className={styles.icon} fontSize="large" />
-            </span>
-            <div>
-              <h5>Envío Gratis</h5>
-              <p>Recíbelo en 5 días</p>
-            </div>
+          <Typography fontWeight="600" mt={2} variant="h4" component="h6">
+            {idProductSelected.brand}
+          </Typography>
+          <Typography fontWeight="500" variant="h4" component="h6">
+            {idProductSelected.title}
+          </Typography>
+
+    
+          <Typography fontWeight="600" mt={3} mb={2} variant="h5" component="h6">
+          {`S/ ${idProductSelected.price}`}
+          </Typography>
+          
+       
+        </div>
+
+        <div className={styles.ItemAboutProduct}>
+          <h3>About product</h3>
+          <div className={styles.accordionBox}>
+            <SimpleAccordion idProductSelected={idProductSelected} />
           </div>
         </div>
 
-        <div>
-          <ItemCount />
+        <div className={styles.ItemAboutShipping}>
+          <h3>Shipping</h3>
+          <div className={styles.delivery}>
+            <div className={styles.shipping}>
+              <span>
+                {" "}
+                <LocalShippingIcon className={styles.icon} fontSize="large" />
+              </span>
+              <div>
+                <h5>Envío Gratis</h5>
+                <p>Recíbelo en 5 días</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Columna derecha  */}
+      <div className={styles.ItemAddProductCart}>
+        <Typography align="center" mb={3} variant="h6" component="h1">
+          Order summary
+        </Typography>
+        
+       <div className={styles.stock}>
+       <Typography variant="h6" component="h1">
+          Quantity
+        </Typography>
+      
+        <Typography variant="h6" component="h1">
+         {`( Stock: ${idProductSelected.stock} )` }
+          </Typography>
+       </div>
+       
+        
+        <Typography variant="h6" component="h1">
+          Weigth
+        </Typography>
+        
+        {/* pasarle como props idProductSelected para poder pintar detalle del producto */}
+        <ItemCount />
+      </div>
     </div>
+
   );
 };
 

@@ -19,7 +19,7 @@ const SimpleAccordion = ( {idProductSelected} ) => {
           <Typography>Información nutricional</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography variant="h4" component="h6">
             {idProductSelected.composition}
           </Typography>
         </AccordionDetails>
