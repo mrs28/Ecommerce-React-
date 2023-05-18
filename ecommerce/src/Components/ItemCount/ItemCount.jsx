@@ -2,6 +2,7 @@ import styles from "./ItemCount.module.css";
 import { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import Typography from "@mui/material/Typography";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
@@ -22,38 +23,41 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         <div className={styles.countItem}>
           <div>
             <button onClick={sumar}>
-              <AddIcon className={styles.icon} fontSize="large" />{" "}
+              <AddIcon className={styles.icon} fontSize="medium" />{" "}
             </button>
           </div>
           <div className={styles.countItem}>
-            <h3>{count}1 </h3>
+
+          <Typography variant="body1" component="h1">
+          <span> {count} 1</span> 
+            </Typography>
+        
           </div>
           <div className={styles.countItem}>
             <button onClick={restar}>
               {" "}
-              <RemoveIcon className={styles.icon} fontSize="large" />{" "}
+              <RemoveIcon className={styles.icon} fontSize="medium" />{" "}
             </button>
           </div>
         </div>
 
-        {/* <div className={styles.countButton}> */}
-        <button className={styles.addCartButton} onClick={() => onAdd(count)}>
-          Agregar al carrito
-        </button>
+      
 
         {/* </div> */}
       </div>
+
+        {/* <div className={styles.countButton}>
+        <button className={styles.addCartButton} onClick={() => onAdd(count)}>
+          Agregar al carrito
+        </button>
 
       <div>
         <button className={styles.buyButton} onClick={() => onAdd(count)}>
           Ir a pagar
         </button>
-      </div>
+      </div> */}
 
-      <div>
-        <h3>Nuestros métodos de pago</h3>
-        <img src="" alt="" />
-      </div>
+  
     </div>
   );
 };

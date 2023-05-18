@@ -1,23 +1,21 @@
-.itemCount {
-  width: 80%;
+/* .itemCount {
+  width: 20%;
   font-size: 600;
   margin-top: 2rem;
   background-color: green;
-}
-
+} */
 
 /* padre de los btn de suma y resta y botón agregar */
-.countItemBox {
-  width: 100%;
+/* .countItemBox {
+  width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #308e95;
   /* background-color: red; */
-}
 
 .countItem {
-  width: 30%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,12 +30,13 @@
   /* border: 1px solid  #308E95; */
 }
 
-.addCartButton,
+/* .addCartButton,
 .countItem,
 .itemCount,
 .buyButton {
   height: 3.5rem;
-}
+} */
+
 button {
   border: none;
 }

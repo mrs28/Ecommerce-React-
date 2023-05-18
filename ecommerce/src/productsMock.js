@@ -8,6 +8,8 @@ export const products = [
     weight: 7,
     description: "Formulado para auxiliar en el control del peso y mantener la masa muscular",
     category: "Food adult cat",
+    type: "Dry food",
+    delivery: 9.90,
     img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679109079/matissegatosadultoscastradossalmo-n8739_500x_xqh4ii.jpg",
     details:"Alimento completo para gatos adultos castrados.Libre de granos y libre de gluten. 100% proteína animal de pollo.",
     composition:"Composición:Carne de pollo deshidratada, tapioca, guisantes, proteína de pollo hidrolizada, levadura y extracto de levadura-Saccharomyces cerevisiae (Fuente de mananooligosacáridos – MOS y β-glucanos), grasa de ave (Fuente de ac. grasos Ω-6), hígado de pollo hidrolizado, proteína de patata, celulosa natural (Fuente de fibra insoluble), boniato, aceite de pescado (Fuente de ac. grasos Ω-3-EPA y DHA), pulpa de remolacha, vaina de algarroba, huevo entero deshidratado, minerales, Inulina (Fibra soluble de achicoria, fuente fosfooligosacáridos – FOS), fibra dietética soluble extraída de Plantago ovata, aceites esenciales (orégano, canela, clavo, tomillo, romero, hierba buena, té verde), yucca, hidrolizado de crustáceos (Fuente de Glucosamina), hidrolizado de cartílago (Fuente de Condroitina), concentrado de zumo de melón liofilizado (Rico en superoxido dismutasa – SOD)."
@@ -21,6 +23,8 @@ export const products = [
     weight: 7,
     description: "Receta de pollo de elevado contenido en proteínas, alta digestibilidad y palatabilidad.",
     category: "Cat´s food",
+    type: "Dry food",
+    delivery: 9.90,
     img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679091278/BRAVERY_500x_pmmhgj.jpg"
    },
    {
@@ -32,6 +36,8 @@ export const products = [
     weight: 7,
     description: "Cuida el tratamiento urinario. Libre de OMG y sólo conservantes naturales.",
     category: "Cat´s food",
+    type: "Dry food",
+    delivery: 9.90,
     img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679091510/ND-FRANGO_500x_xduf8o.jpg"
    },
    {
@@ -43,6 +49,8 @@ export const products = [
     weight: 1.6,
     description: "Elaborado con una mezcla de fibras naturales que permiten deshacerse de las bolas de pelo",
     category: "Cat´s food",
+    type: "Dry food",
+    delivery: 9.90,
     img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679092021/6-Hill_s_ScienceDiet_FelineAdultHairballControl_500x_xjhudh.jpg"
    },
    {
@@ -54,6 +62,8 @@ export const products = [
     weight: 20,
     description: "Es un producto natural hecho de BENTONITA de alta calidad sin aditivos químicos.",
     category: "Arena",
+    type: "Dry food",
+    delivery: 9.90,
     img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679092330/klinkat-arena-para-gatos_500x_way4qg.jpg"
    },
    {
@@ -65,6 +75,8 @@ export const products = [
     weight: 7,
     description: "Es un producto natural hecho de BENTONITA de alta calidad sin aditivos químicos.",
     category: "Arena",
+    type: "Dry food",
+    delivery: 9.90,
     img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679092330/klinkat-arena-para-gatos_500x_way4qg.jpg"
    },
    {
@@ -76,6 +88,8 @@ export const products = [
     weight: 0.45,
     description: "INSECTICIDA - PULGUICIDA - PIOJICIDA  Dosis: 1 pipeta por animal, según peso. ",
     category: "Cuidado",
+    type: "Dry food",
+    delivery: 9.90,
     img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679109408/Pigato4-9_500x_se6wg3.jpg"
    },
    {
@@ -87,6 +101,8 @@ export const products = [
     weight: 440,
     description: "Reduce las bolas de pelo al eliminar el exceso de cabello suelto.",
     category: "Cuidado",
+    type: "Dry food",
+    delivery: 9.90,
     img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679093108/SHAMPOOPARAGATOSHARTZ_500x_grsif0.jpg"
    },
    {
@@ -98,6 +114,8 @@ export const products = [
       weight: 7,
       description: "Receta de pollo de elevado contenido en proteínas, alta digestibilidad y palatabilidad.",
       category: "Cat´s food",
+      type: "Dry food",
+      delivery: 9.90,
       img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679091278/BRAVERY_500x_pmmhgj.jpg"
      },
      {
@@ -109,6 +127,8 @@ export const products = [
       weight: 7,
       description: "Receta de pollo de elevado contenido en proteínas, alta digestibilidad y palatabilidad.",
       category: "Cat´s food",
+      type: "Dry food",
+      delivery: 9.90,
       img: "https://res.cloudinary.com/dzjf00pvx/image/upload/v1679091278/BRAVERY_500x_pmmhgj.jpg"
      },
 ]

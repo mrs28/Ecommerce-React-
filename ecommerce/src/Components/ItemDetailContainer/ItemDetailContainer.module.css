@@ -1,4 +1,5 @@
 .itemDetail {
+  padding: 1.5rem;
   display: flex;
   /* background-color: red; */
 }
@@ -11,7 +12,7 @@
 }
 
 .ItemDetailProduct {
-    padding: 0.5rem;
+  padding: 1rem;
   width: 35%;
   /* background-color: gray; */
   display: flex;
@@ -20,12 +21,15 @@
 }
 
 .ItemAddProductCart {
+  padding: 2rem;
   width: 30%;
+  background-color: white;
+  border: 1px solid grey;
 }
 
-/*Columna izquierda*/
+/****************** *Columna izquierda ***********************/
 /*padre slider*/
-.sliderBox {
+/* .sliderBox {
   padding: 0.5rem;
   display: inline-block;
   width: 100%;
@@ -33,22 +37,17 @@
   position: relative;
   overflow: hidden;
  
-}
-
-.slider {
-  width: 80%;
-  margin: auto;
-}
+} */
 
 .sliderImg {
   border: 1.5px solid #308e95;
   border-radius: 8%;
 }
 
-/****** COLUMNA CENTRO ******/
+/****************** *Columna centro ***********************/
 
 .ItemAboutPrice {
- padding: 0.5rem;
+  padding: 0.5rem;
   border-bottom: solid 0.5px grey;
   height: 35%;
   width: 90%;
@@ -56,7 +55,7 @@
 }
 
 .ItemAboutProduct {
-    padding: 0.5rem;
+  padding: 0.5rem;
   /* border-bottom: solid 1px grey; */
   height: 35%;
   width: 90%;
@@ -72,7 +71,6 @@
 
 .accordionBox {
   width: 100%;
-  
 }
 
 .accordionBox,
@@ -80,21 +78,52 @@
   margin-top: 2rem;
 }
 
-.delivery {
-  width: 75%;
-  height: 5rem;
-  padding-top: 3rem;
-} 
-
- .shipping {
+.shipping {
   width: 70%;
   padding: 0 0 0 1rem;
   display: flex;
   justify-content: space-between;
-  
-} 
-
-/*Columna derecha*/
-.stock {
-    display: flex;
 }
+
+/****************** *Columna derecha ***********************/
+.orderSummary {
+  border-bottom: 1px solid grey;
+}
+
+.quantityStock {
+  display: flex;
+}
+
+.orderSummary,
+.quantityAccount,
+.weight,
+.type,
+.delivery,
+.confirmationOrder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.8rem;
+}
+
+.confirmationOrder {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.confirmationOrder .img {
+  width: 25%;
+}
+
+.confirmationOrder .price {
+  width: 40%;
+  text-align: right;
+}
+
+/* .itemCount {
+padding: 1rem;
+background-color: blue;
+} */

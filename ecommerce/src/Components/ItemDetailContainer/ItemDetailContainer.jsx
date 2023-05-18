@@ -16,8 +16,6 @@ import ItemCount from "../ItemCount/ItemCount";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 // import ScheduleIcon from '@mui/icons-material/Schedule';
 
-
-
 const ItemDetailContainer = () => {
   // Desestructuro useParams()
   const { id } = useParams();
@@ -30,8 +28,7 @@ const ItemDetailContainer = () => {
   console.log(idProductSelected);
 
   return (
-
-      <div className={styles.itemDetail}>
+    <div className={styles.itemDetail}>
       {/* Columna izquierda  */}
       <div className={styles.itemDetailImage}>
         <figure className={styles.figure}>
@@ -85,23 +82,36 @@ const ItemDetailContainer = () => {
       {/* Columna centro  */}
       <div className={styles.ItemDetailProduct}>
         <div className={styles.ItemAboutPrice}>
-          <Typography fontWeight="Light" color="grey" variant="h6" component="h1">
+          <Typography
+            fontWeight="Light"
+            color="grey"
+            variant="body1"
+            component="h1"
+          >
             {idProductSelected.category}
           </Typography>
-          
+
           <Typography fontWeight="600" mt={2} variant="h4" component="h6">
             {idProductSelected.brand}
           </Typography>
-          <Typography fontWeight="500" variant="h4" component="h6">
+          <Typography
+            fontSize="16"
+            fontWeight="500"
+            variant="h4"
+            component="h6"
+          >
             {idProductSelected.title}
           </Typography>
 
-    
-          <Typography fontWeight="600" mt={3} mb={2} variant="h5" component="h6">
-          {`S/ ${idProductSelected.price}`}
+          <Typography
+            fontWeight="600"
+            mt={3}
+            mb={2}
+            variant="h5"
+            component="h6"
+          >
+            {`S/ ${idProductSelected.price}`}
           </Typography>
-          
-       
         </div>
 
         <div className={styles.ItemAboutProduct}>
@@ -130,30 +140,87 @@ const ItemDetailContainer = () => {
 
       {/* Columna derecha  */}
       <div className={styles.ItemAddProductCart}>
-        <Typography align="center" mb={3} variant="h6" component="h1">
-          Order summary
-        </Typography>
-        
-       <div className={styles.stock}>
-       <Typography variant="h6" component="h1">
-          Quantity
-        </Typography>
-      
-        <Typography variant="h6" component="h1">
-         {`( Stock: ${idProductSelected.stock} )` }
+        <div className={styles.orderSummary}>
+          <Typography
+            mt={1}
+            mb={1}
+            fontWeight="600"
+            variant="h6"
+            component="h1"
+          >
+            Order summary
           </Typography>
-       </div>
-       
-        
-        <Typography variant="h6" component="h1">
-          Weigth
-        </Typography>
-        
+        </div>
+
+        <div className={styles.quantityAccount}>
+          <div className={styles.quantityStock}>
+            <Typography variant="body1" component="h1">
+              Quantity
+            </Typography>
+            <Typography
+              ml={1}
+              fontWeight="Light"
+              color="grey"
+              variant="body1"
+              component="h1"
+            >
+              {`(Stock: ${idProductSelected.stock})`}
+            </Typography>
+          </div>
+          <div className={styles.itemCount}>
+            <ItemCount />
+          </div>
+        </div>
+
+        <div className={styles.weight}>
+          <Typography variant="body1" component="h1">
+            Weight
+          </Typography>
+
+          <Typography variant="body1" component="h1">
+            {idProductSelected.weight}
+          </Typography>
+        </div>
+
+        <div className={styles.type}>
+          <Typography variant="body1" component="h1">
+            Category
+          </Typography>
+
+          <Typography variant="body1" component="h1">
+            {idProductSelected.type}
+          </Typography>
+        </div>
+
+        <div className={styles.delivery}>
+          <Typography variant="body1" component="h1">
+            Delivery
+          </Typography>
+
+          <Typography variant="body1" component="h1">
+            {idProductSelected.delivery}
+          </Typography>
+        </div>
+
+        <div className={styles.confirmationOrder}>
+          <div className={styles.img}>
+            <img src={idProductSelected.img} alt="" width={60} height={60} />
+          </div>
+          <div className={styles.brand}>
+            <Typography variant="body1" component="h1">
+              {idProductSelected.brand}
+            </Typography>
+          </div>
+          <div className={styles.price}>
+            <Typography variant="body1" component="h1">
+              {idProductSelected.price}
+            </Typography>
+          </div>
+        </div>
+
         {/* pasarle como props idProductSelected para poder pintar detalle del producto */}
-        <ItemCount />
       </div>
     </div>
-
   );
 };
 

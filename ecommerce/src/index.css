@@ -22,6 +22,7 @@ https://mui.com/material-ui/customization/typography/#font-size
 body {
   font-size: 1.3rem;
   color: black;
+  /* background-color: green; */
   background-color: beige;
   /* background-color: #308E95; */
   margin: 0;
