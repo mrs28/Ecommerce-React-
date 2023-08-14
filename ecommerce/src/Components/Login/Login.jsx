@@ -5,11 +5,15 @@ const Login = () => {
   return (
 
     <div className={styles.login}>
+   
         <NavbarLeft/>
         <div className={styles.services}>
             <h3>ASESORÍA TELEFÓNICA</h3>
             <h3>COMPRA SEGURA</h3>
         </div>
+       <div>
+       login
+       </div>
     </div>
 
   )

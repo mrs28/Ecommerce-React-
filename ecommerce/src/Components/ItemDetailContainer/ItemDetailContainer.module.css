@@ -92,6 +92,11 @@
 
 .quantityStock {
   display: flex;
+  width: 70%;
+}
+
+.itemCount {
+  width: 30%;
 }
 
 .orderSummary,
@@ -122,8 +127,3 @@
   width: 40%;
   text-align: right;
 }
-
-/* .itemCount {
-padding: 1rem;
-background-color: blue;
-} */

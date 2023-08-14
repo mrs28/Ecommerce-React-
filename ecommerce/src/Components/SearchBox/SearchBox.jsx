@@ -5,8 +5,13 @@ import Input from "../Atoms/Input/Input";
 const SearchBox = () => {
   return (
     <div className={styles.search}>
+      <div  className={styles.input}>
       <Input />
-      <Button />
+      </div>
+   
+     <div className={styles.button}>
+     <Button />
+     </div>
      
     </div>
   );

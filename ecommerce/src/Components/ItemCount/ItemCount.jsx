@@ -4,11 +4,11 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import Typography from "@mui/material/Typography";
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial = 1, onAdd }) => {
   const [count, setCount] = useState(initial);
 
   const sumar = () => {
-    setCount(count + 1);
+    if (count < stock) setCount(count + 1);
   };
 
   const restar = () => {
@@ -18,46 +18,38 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   };
 
   return (
-    <div className={styles.itemCount}>
-      <div className={styles.countItemBox}>
-        <div className={styles.countItem}>
-          <div>
-            <button onClick={sumar}>
-              <AddIcon className={styles.icon} fontSize="medium" />{" "}
-            </button>
-          </div>
-          <div className={styles.countItem}>
-
-          <Typography variant="body1" component="h1">
-          <span> {count} 1</span> 
-            </Typography>
-        
-          </div>
-          <div className={styles.countItem}>
-            <button onClick={restar}>
-              {" "}
-              <RemoveIcon className={styles.icon} fontSize="medium" />{" "}
-            </button>
-          </div>
-        </div>
-
-      
-
-        {/* </div> */}
+    <div >
+     <div className={styles.itemCount}>
+     <div className={styles.countItemAdd}>
+        {/* <button > */}
+        <AddIcon
+          onClick={sumar}
+          className={styles.icon}
+          fontSize="medium"
+        />{" "}
+        {/* </button> */}
       </div>
+      <div className={styles.countItemNumber}>
+        <Typography variant="body1" component="h1">
+          <span> {count} </span>
+        </Typography>
+      </div>
+      <div className={styles.countItemRemove}>
+        {/* <button > */}{" "}
+        <RemoveIcon
+          onClick={restar}
+          className={styles.icon}
+          fontSize="medium"
+        />{" "}
+        {/* </button> */}
+      </div>
+     </div>
 
-        {/* <div className={styles.countButton}>
-        <button className={styles.addCartButton} onClick={() => onAdd(count)}>
+     <div>
+     <button className={styles.addCartButton} onClick={() => onAdd(count)}>
           Agregar al carrito
         </button>
-
-      <div>
-        <button className={styles.buyButton} onClick={() => onAdd(count)}>
-          Ir a pagar
-        </button>
-      </div> */}
-
-  
+     </div>
     </div>
   );
 };

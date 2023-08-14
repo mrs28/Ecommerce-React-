@@ -1,16 +1,16 @@
-import styles  from './Categories.module.css';
+import styles from "./Categories.module.css";
 
 const Categories = () => {
   return (
     <div className={styles.categories}>
-        {/* <select name="select">
+      {/* <select name="select">
         <option value="value1">Value 1</option>
         <option value="value2" selected>Value 2</option>
         <option value="value3">Value 3</option>
 </select> */}
     </div>
-  )
-}   
+  );
+};
 
 export default Categories;
 

@@ -1,12 +1,20 @@
-.search{
-    /* display: flex; */
-    /* width: 60%;
-    padding: 1rem;
-    border-color: blue;
-    background-color: red; */
-    border: 1px solid grey;
-    display: inline-flex;
-    padding: 0.5rem;
-    background: greenyellow;
-    align-items: center;
+.search {
+  display: flex;
+  width: 80%;
+  /* padding: 1rem; */
+ 
+
+  border: 1px solid grey;
+  /* display: inline-flex; */
+
+  background: greenyellow;
+  
+}
+
+.input {
+    width: 80%;
+}
+
+.button {
+    width: 20%;
 }

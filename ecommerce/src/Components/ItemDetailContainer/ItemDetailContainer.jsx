@@ -19,13 +19,18 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 const ItemDetailContainer = () => {
   // Desestructuro useParams()
   const { id } = useParams();
-  console.log("soy id", id); //id llega como un string
+  // console.log("soy id", id); //id llega como un string
 
   //al array products
   const idProductSelected = products.find(
-    (product) => product.id === Number(id) //usae comprador estricto
-  ); //product.id llega como number por eso convierto el string id en Number
-  console.log(idProductSelected);
+    (product) => product.id === Number(id)
+  );
+  //usae comprador estricto
+  //product.id llega como number por eso convierto el string id en Number
+
+  const onAdd = (cantidad) => {
+    console.log(`se agregó al carrito ${cantidad} productos `);
+  };
 
   return (
     <div className={styles.itemDetail}>
@@ -88,7 +93,7 @@ const ItemDetailContainer = () => {
             variant="body1"
             component="h1"
           >
-            {idProductSelected.category}
+            {idProductSelected.type}
           </Typography>
 
           <Typography fontWeight="600" mt={2} variant="h4" component="h6">
@@ -168,7 +173,7 @@ const ItemDetailContainer = () => {
             </Typography>
           </div>
           <div className={styles.itemCount}>
-            <ItemCount />
+            <ItemCount stock={idProductSelected.stock} onAdd={onAdd} />
           </div>
         </div>
 
@@ -178,7 +183,7 @@ const ItemDetailContainer = () => {
           </Typography>
 
           <Typography variant="body1" component="h1">
-            {idProductSelected.weight}
+            {idProductSelected.weight} {`Kg.`}
           </Typography>
         </div>
 
@@ -198,7 +203,7 @@ const ItemDetailContainer = () => {
           </Typography>
 
           <Typography variant="body1" component="h1">
-            {idProductSelected.delivery}
+            {`S/.`} {idProductSelected.delivery}
           </Typography>
         </div>
 

@@ -1,6 +1,6 @@
 .navbarRight {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 18%;
+    justify-content: space-around;
+    width: 20%;
 }

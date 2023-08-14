@@ -1,5 +1,5 @@
 // import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
-import Typography from "@mui/material/Typography";
+// import Typography from "@mui/material/Typography";
 import styles from "./Item.module.css";
 import { Link } from "react-router-dom";
 

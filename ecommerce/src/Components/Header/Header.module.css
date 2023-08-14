@@ -1,5 +1,6 @@
 .header {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     background-color: #ff9800;
@@ -7,4 +8,14 @@
     color: white;
     padding: 1rem 2rem;
     margin-bottom: 5rem;
+}
+
+.mainNav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; 
+}
+.categories {
+    display: flex;
+    width: 100%;
 }

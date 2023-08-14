@@ -5,17 +5,15 @@ import PageHome from './Pages/PageHome/PageHome';
 import Cart from './Components/Cart/Cart';
 import Login from './Components/Login/Login';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
-// import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
-// import ConsumiendoApis from './Components/ConsumiendoApis/ConsumiendoApis'
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import Formulario from './Components/Formulario/Formulario';
+
 
 
 // import ProductList from './Components/ProductsList/ProductsList';
 // import Main from './Components/Main/Main'
 
 // // import ItemCount from './Components/ItemCount/ItemCount';
-
-// import PageHome from './Pages/PageHome/PageHome';
-
 
 
 function App() {
@@ -45,10 +43,6 @@ function App() {
                 </LayoutPublic>}
             />
 
-      {/* <Route 
-        path="/login" 
-        element={<PageLogin />} 
-      /> */}
             <Route
               path="/cart"
               element={
@@ -56,6 +50,16 @@ function App() {
                   <Cart/>
                 </LayoutPublic>}
               />
+
+        <Route
+
+        path="/form"
+        element={
+          <LayoutPublic>
+            <Formulario/>
+          </LayoutPublic>
+        }
+        />
 
             <Route
               path="/itemDetail/:id"
@@ -65,10 +69,20 @@ function App() {
                 </LayoutPublic>}
               />
 
+            <Route
+              path="/category/:categoryName"
+              element={
+            
+                <LayoutPublic>
+                  <ItemListContainer/>
+                </LayoutPublic>
+              }
+             />
+
             <Route 
               path="*" 
               element={<h1> error 404: Not found </h1>} 
-              />
+            />
           
       
           </Routes>

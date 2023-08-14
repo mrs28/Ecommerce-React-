@@ -1,20 +1,24 @@
 .navbar {
-    margin: auto;
-    width: 25%;
-    text-align: center;
+  margin: auto;
+  width: 100%;
+  text-align: center;
 }
+
 .navbarList {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  /* padding-top: 2rem; */
 }
 
-a { 
-    color: white;
-    font-weight: 500;
+a {
+  color: white;
+  font-weight: 500;
 }
 
-a:hover {
-    color: #F2D589;
-}
+/* a:hover {
+   text-decoration: underline;
+
+} */
+  /* color: #f2d589; */
