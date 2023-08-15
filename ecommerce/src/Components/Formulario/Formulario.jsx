@@ -12,6 +12,10 @@ const Formulario = () => {
     password: "",
   });
 
+  //*** RENDERIZADO CONDICIONAL ***
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  
   //   const handleChangeName = (event) => {
   //     setName(event.target.value);
   //   };
@@ -22,17 +26,53 @@ const Formulario = () => {
     setUserData({ ...userData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(e);
-  };
-
   // const handleChangeEmail = (event) => {
   //   setUserData({ ...userData, email: event.target.value });
   // };
 
   // const handleChangePassword = (event) => {
   //   setUserData({ ...userData, password: event.target.value });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("soy evento del handleSubmit", e);
+  };
+
+  // *** name que tenga un mínimo de 5 caracteres ***
+  if (userData.name.length < 5) {
+    // console.log("El nombre debe tener cómo mínimo 5 caracteres");
+    setError(true);
+    setErrorMessage("El nombre no puede ser menor a 5 caracteres");
+    return;
+  }
+//*** email debe tener @ ***
+//includes me devuelve un true or false
+  const searchString = userData.email.includes("@")
+  console.log("soy email ingresado", searchString)
+
+  //si NO es true
+  if(!searchString) {
+    // console.log("Ingrese un email válido");
+    setError(true)
+    setErrorMessage("Ingrese un email válido que incluya @")
+  }
+
+
+  // // +++ password no debe tener espacios
+  const string = userData.password.trim();
+  const passwordIsValid = userData.password === string;
+
+  if(!passwordIsValid){
+    // console.log("Ingresa un password válido");
+    setError(true)
+    setErrorMessage("El password no dede tener espacios en blanco")
+  }
+
+  console.log(userData)
+
+  //*** INSTRUCCIÓN ***
+  //axios.post("el endpoint", userData)
+  //axios.patch("el endpoint", { userData.email })
 
   return (
     <div className={styles.form}>
@@ -62,8 +102,10 @@ const Formulario = () => {
           // onChange={handleChangePassword}
         />
 
-        <button>FORMULARIO AQUÍ</button>
+        <button>ENVIAR FORMULARIO</button>
       </form>
+
+      {/* {error ? <h1>"USTED NO CUMPLE CON LAS VALIDACIONES</h1> : null} */}
     </div>
   );
 };
