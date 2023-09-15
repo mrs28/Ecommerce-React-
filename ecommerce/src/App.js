@@ -7,7 +7,7 @@ import Login from './Components/Login/Login';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import Formulario from './Components/Formulario/Formulario';
-
+import CartContextProvider from './Context/CartContext'
 
 
 // import ProductList from './Components/ProductsList/ProductsList';
@@ -28,6 +28,9 @@ function App() {
   return (
     <div>
         <BrowserRouter>
+
+        <CartContextProvider> 
+
           <Routes>
 
             <Route
@@ -72,12 +75,12 @@ function App() {
             <Route
               path="/category/:categoryName"
               element={
-            
+                
                 <LayoutPublic>
                   <ItemListContainer/>
                 </LayoutPublic>
               }
-             />
+              />
 
             <Route 
               path="*" 
@@ -86,6 +89,7 @@ function App() {
           
       
           </Routes>
+              </CartContextProvider>
         </BrowserRouter>
     </div>
 //     // <BrowserRouter>

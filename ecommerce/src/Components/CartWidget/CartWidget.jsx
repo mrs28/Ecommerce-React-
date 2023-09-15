@@ -4,12 +4,16 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import Button from "../Atoms/Button/Button";
 import { Link } from "react-router-dom";
 
+
+ 
 const CartWidget = ({ title }) => {
   return (
     <Link to="/cart">
       <Button>
         <AddShoppingCartIcon className={styles.icon} fontSize="large" />
+        
         {title}
+        
       </Button>
     </Link>
   );
