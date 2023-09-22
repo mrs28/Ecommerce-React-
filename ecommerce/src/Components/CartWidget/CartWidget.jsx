@@ -1,19 +1,23 @@
 import styles from "./CartWidget.module.css";
-
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Button from "../Atoms/Button/Button";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
 
+import Badge from "@mui/material/Badge";
 
- 
 const CartWidget = ({ title }) => {
+  const { cart } = useContext(CartContext);
+  console.log("soy cart", cart);
+
   return (
     <Link to="/cart">
       <Button>
-        <AddShoppingCartIcon className={styles.icon} fontSize="large" />
-        
-        {title}
-        
+        <Badge badgeContent={cart.length} color="primary">
+          <ShoppingCartIcon className={styles.icon} fontSize="large" />
+        </Badge>
+        Cart
       </Button>
     </Link>
   );

@@ -28,68 +28,67 @@ function App() {
   return (
     <div>
         <BrowserRouter>
+          <CartContextProvider> 
 
-        <CartContextProvider> 
+            <Routes>
 
-          <Routes>
-
-            <Route
-            path="/login"
-            element={<Login/>}
-            />
-
-            <Route
-              path="/"
-              element={
-                <LayoutPublic>
-                  <PageHome/>
-                </LayoutPublic>}
-            />
-
-            <Route
-              path="/cart"
-              element={
-                <LayoutPublic>
-                  <Cart/>
-                </LayoutPublic>}
+              <Route
+              path="/login"
+              element={<Login/>}
               />
 
-        <Route
-
-        path="/form"
-        element={
-          <LayoutPublic>
-            <Formulario/>
-          </LayoutPublic>
-        }
-        />
-
-            <Route
-              path="/itemDetail/:id"
-              element={
-                <LayoutPublic>
-                  <ItemDetailContainer/>
-                </LayoutPublic>}
+              <Route
+                path="/"
+                element={
+                  <LayoutPublic>
+                    <PageHome/>
+                  </LayoutPublic>}
               />
 
-            <Route
-              path="/category/:categoryName"
-              element={
-                
-                <LayoutPublic>
-                  <ItemListContainer/>
-                </LayoutPublic>
-              }
-              />
+              <Route
+                path="/cart"
+                element={
+                  <LayoutPublic>
+                    <Cart/>
+                  </LayoutPublic>}
+                />
 
-            <Route 
-              path="*" 
-              element={<h1> error 404: Not found </h1>} 
-            />
-          
-      
-          </Routes>
-              </CartContextProvider>
+          <Route
+
+          path="/form"
+          element={
+            <LayoutPublic>
+              <Formulario/>
+            </LayoutPublic>
+          }
+          />
+
+              <Route
+                path="/itemDetail/:id"
+                element={
+                  <LayoutPublic>
+                    <ItemDetailContainer/>
+                  </LayoutPublic>}
+                />
+
+              <Route
+                path="/category/:categoryName"
+                element={
+                  
+                  <LayoutPublic>
+                    <ItemListContainer/>
+                  </LayoutPublic>
+                }
+                />
+
+              <Route 
+                path="*" 
+                element={<h1> error 404: Not found </h1>} 
+              />
+            
+        
+            </Routes>
+          </CartContextProvider>
         </BrowserRouter>
     </div>
 //     // <BrowserRouter>
