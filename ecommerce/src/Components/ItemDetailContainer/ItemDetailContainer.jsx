@@ -9,27 +9,28 @@ import "slick-carousel/slick/slick-theme.css";
 // import CssBaseline from '@mui/material/CssBaseline';
 import Typography from "@mui/material/Typography";
 import styles from "./ItemDetailContainer.module.css";
+import SimpleAccordion from "../SimpleAccordion/SimpleAccordion";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../../productsMock";
-import SimpleAccordion from "../SimpleAccordion/SimpleAccordion";
 import ItemCount from "../ItemCount/ItemCount";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import { CartContext } from "../../Context/CartContext";
 // import ScheduleIcon from '@mui/icons-material/Schedule';
 
 const ItemDetailContainer = () => {
   // Desestructuro useParams()
   const { id } = useParams();
-  // console.log("soy id", id); //id llega como un string
 
-  //al array products
+  const { agregarAlCarrito } = useContext( CartContext )
+  
   const idProductSelected = products.find(
     (product) => product.id === Number(id)
-  );
-  //usae comprador estricto
-  //product.id llega como number por eso convierto el string id en Number
+  ); //uso comparador estricto/ product.id llega como number por eso convierto el string id en Number
 
   const onAdd = (cantidad) => {
-    console.log(`se agregó al carrito ${cantidad} productos `);
+    agregarAlCarrito(idProductSelected);
+    // console.log(`se agregó al carrito ${cantidad} productos `);
   };
 
   return (

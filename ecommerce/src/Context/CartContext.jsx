@@ -1,22 +1,21 @@
 import { createContext, useState } from "react";
 
 export const CartContext = createContext(); //nombre del contexto
-//  const [cart, setCart] = useState([]);
-
-// let data = { //aquí va todo lo que vaya a querer consumir
-//   cart: cart,
-//   setCart: setCart,
-//   algo: "",
-// };
 
 //envuelve a toda la app (gran círculo)
 const CartContextProvider = ({ children }) => {
-  const [cart, setCart] = useState([{}, {}]);
+  const [cart, setCart] = useState([]);
+  
+   // FUNCION PARA AGREGAR AL CARRITO
+  const agregarAlCarrito = (producto)=>{
+    setCart([...cart, producto])
+  }
 
   // aqúí va todo lo que va a consumir
   let data = {
     cart: cart,
     setCart: setCart,
+    agregarAlCarrito: agregarAlCarrito,
   };
   // AGREGAR
   // ELIMINAR

@@ -1,7 +1,7 @@
 .itemDetail {
   padding: 1.5rem;
   display: flex;
-  /* background-color: red; */
+  background-color: blue;
 }
 
 .itemDetailImage {

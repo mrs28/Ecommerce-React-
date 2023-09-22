@@ -2,12 +2,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import LayoutPublic from './Components/Layout/LayoutPublic/LayoutPublic';
 import PageHome from './Pages/PageHome/PageHome';
-import Cart from './Components/Cart/Cart';
+// import Cart from './Components/Cart/Cart';
 import Login from './Components/Login/Login';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import Formulario from './Components/Formulario/Formulario';
 import CartContextProvider from './Context/CartContext'
+import CartNumberProducts from './Components/CartNumberProducts/CartNumberProducts';
 
 
 // import ProductList from './Components/ProductsList/ProductsList';
@@ -49,7 +50,7 @@ function App() {
                 path="/cart"
                 element={
                   <LayoutPublic>
-                    <Cart/>
+                    <CartNumberProducts/>
                   </LayoutPublic>}
                 />
 
