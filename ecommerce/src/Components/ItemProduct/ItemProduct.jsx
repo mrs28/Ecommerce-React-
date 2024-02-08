@@ -7,9 +7,8 @@ const ItemProduct = ({ items }) => {
         return (
           <div>
             <div className={styles.cardProduct}>
-              <figure >
+              <figure>
                 <img className={styles.img} src={item.img} alt="" />
-   
               </figure>
 
               <div className={styles.mg}>
@@ -19,12 +18,10 @@ const ItemProduct = ({ items }) => {
               <div className={styles.mg}>
                 <span> {item.price} </span>
               </div>
-              <div  className={styles.frame} class=" marginTop flex-row amount">
-           
-                    <span className={styles.span}>-</span>
-                    <span className={styles.span}>CANT.</span>
-                    <span className={styles.span}>+</span>
-           
+              <div className={styles.frame} class=" marginTop flex-row amount">
+                <span className={styles.span}>-</span>
+                <span className={styles.span}>CANT.</span>
+                <span className={styles.span}>+</span>
               </div>
               <div class="marginTop addProduct">
                 <button>Agregar</button>

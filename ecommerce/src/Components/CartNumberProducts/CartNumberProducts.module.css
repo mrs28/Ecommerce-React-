@@ -1,5 +1,13 @@
 .cartNumberProducts {
     background-color: chocolate;
-    width: 500px;
+    width: 100%;
     height: 600px;
+}
+
+.cardProducts, .cardProductsLeft {
+    display: flex;
+}
+
+.cardProductsLeft, .cardProductsRight {
+    width: 50%;
 }
