@@ -1,8 +1,13 @@
 .icon {
-    padding-right: 0.5rem;
-  
+  padding-right: 0.5rem;
 }
 
 .bubble-counter {
-    border-radius: 50%;
+  border-radius: 50%;
+}
+
+.button {
+  background-color: red;
+  width: 60px;
+  height: 80px;
 }

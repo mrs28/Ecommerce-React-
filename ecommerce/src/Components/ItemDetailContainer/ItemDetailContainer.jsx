@@ -22,15 +22,20 @@ const ItemDetailContainer = () => {
   // Desestructuro useParams()
   const { id } = useParams();
 
-  const { agregarAlCarrito } = useContext( CartContext )
-  
+  const { agregarAlCarrito } = useContext(CartContext);
+
+  //uso comparador estricto/ product.id llega como number por eso convierto el string id en Number
   const idProductSelected = products.find(
     (product) => product.id === Number(id)
-  ); //uso comparador estricto/ product.id llega como number por eso convierto el string id en Number
+  );
 
   const onAdd = (cantidad) => {
-    agregarAlCarrito(idProductSelected);
-    // console.log(`se agregó al carrito ${cantidad} productos `);
+    let product = {
+      ...idProductSelected,
+      quantity: cantidad
+    };
+
+    agregarAlCarrito(product);
   };
 
   return (
@@ -173,6 +178,9 @@ const ItemDetailContainer = () => {
               {`(Stock: ${idProductSelected.stock})`}
             </Typography>
           </div>
+
+          {/* COMPONENTE ITEMCOUNT */}
+
           <div className={styles.itemCount}>
             <ItemCount stock={idProductSelected.stock} onAdd={onAdd} />
           </div>

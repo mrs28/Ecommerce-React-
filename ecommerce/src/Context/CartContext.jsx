@@ -1,28 +1,60 @@
 import { createContext, useState } from "react";
+//nombre del contexto
+export const CartContext = createContext();
 
-export const CartContext = createContext(); //nombre del contexto
-
-//envuelve a toda la app (gran círculo)
+//componente wrapper en app (gran círculo)
 const CartContextProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
-  
-   // FUNCION PARA AGREGAR AL CARRITO
-  const agregarAlCarrito = (producto)=>{
-    setCart([...cart, producto])
-  }
-
-  // aqúí va todo lo que va a consumir
-  let data = {
-    cart: cart,
-    setCart: setCart,
-    agregarAlCarrito: agregarAlCarrito,
-  };
+  // Dentro del conexto voy a tener f(x) que quiero poder a disposición de
   // AGREGAR
   // ELIMINAR
   // CONTAR
   // TOTAL DEL PRECIO DE CARRITO
+  const [cart, setCart] = useState([]);
 
-  return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
+
+
+  // FUNCIÓN PARA LIMPIAR EL CARRITO
+  const cleanCart = () => {
+    setCart([]);
+  };
+  
+  // FUNCIÓN PARA AGREGAR AL CARRITO
+  const agregarAlCarrito = (producto) => {
+    let existId = isInCart(producto.id);
+
+    if (existId) {
+      let newCart = cart.map((elemento) => {
+        if (elemento.id === producto.id) {
+          return {
+            ...elemento,
+            quantity: elemento.quantity + producto.quantity,
+          };
+        } else {
+          return elemento;
+        }
+      });
+    } else {
+      // C/vez que se ejecuta recibe un producto y agrega al carrito
+      setCart([...cart, producto]);
+    }
+  };
+
+  // FUNCIÓN PARA ABER SI UN PRODUCTO YA EXISTE EN EL CARRITO. some devuelve un booleano
+  const isInCart = (id) => {
+    return cart.some((elemento) => elemento.id === id);
+  };
+
+  // aqúí va todo lo que va a consumir
+  let data = {
+    cart: cart,
+    agregarAlCarrito: agregarAlCarrito,
+    cleanCart: cleanCart,
+  };
+
+  return (
+    // son los valores quw quiero proveer a los children
+    <CartContext.Provider value={data}>{children}</CartContext.Provider>
+  );
 };
 
 export default CartContextProvider;

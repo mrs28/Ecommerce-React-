@@ -1,3 +1,7 @@
+.itemCountContainer {
+  background-color: chartreuse;
+}
+
 .itemCount {
   display: flex;
   align-items: center;

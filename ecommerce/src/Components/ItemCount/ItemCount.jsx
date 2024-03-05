@@ -1,5 +1,6 @@
 import styles from "./ItemCount.module.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import Typography from "@mui/material/Typography";
@@ -18,38 +19,40 @@ const ItemCount = ({ stock, initial = 1, onAdd }) => {
   };
 
   return (
-    <div >
-     <div className={styles.itemCount}>
-     <div className={styles.countItemAdd}>
-        {/* <button > */}
-        <AddIcon
-          onClick={sumar}
-          className={styles.icon}
-          fontSize="medium"
-        />{" "}
-        {/* </button> */}
+    <div className={styles.itemCountContainer}>
+      <div className={styles.itemCount}>
+        <div className={styles.countItemAdd}>
+          {/* <button > */}
+          <AddIcon
+            onClick={sumar}
+            className={styles.icon}
+            fontSize="medium"
+          />{" "}
+          {/* </button> */}
+        </div>
+        <div className={styles.countItemNumber}>
+          <Typography variant="body1" component="h1">
+            <span> {count} </span>
+          </Typography>
+        </div>
+        <div className={styles.countItemRemove}>
+          {/* <button > */}{" "}
+          <RemoveIcon
+            onClick={restar}
+            className={styles.icon}
+            fontSize="medium"
+          />{" "}
+          {/* </button> */}
+        </div>
       </div>
-      <div className={styles.countItemNumber}>
-        <Typography variant="body1" component="h1">
-          <span> {count} </span>
-        </Typography>
-      </div>
-      <div className={styles.countItemRemove}>
-        {/* <button > */}{" "}
-        <RemoveIcon
-          onClick={restar}
-          className={styles.icon}
-          fontSize="medium"
-        />{" "}
-        {/* </button> */}
-      </div>
-     </div>
 
-     <div>
-     <button className={styles.addCartButton} onClick={() => onAdd(count)}>
-          Agregar al carrito holi
-        </button>
-     </div>
+      <div>
+        <Link to="/cart">
+          <button className={styles.addCartButton} onClick={() => onAdd(count)}>
+            Agregar al carrito holi
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

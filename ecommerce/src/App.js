@@ -30,7 +30,6 @@ function App() {
     <div>
         <BrowserRouter>
           <CartContextProvider> 
-
             <Routes>
 
               <Route
@@ -54,39 +53,39 @@ function App() {
                   </LayoutPublic>}
                 />
 
-          <Route
-
-          path="/form"
-          element={
-            <LayoutPublic>
-              <Formulario/>
-            </LayoutPublic>
-          }
-          />
+      
 
               <Route
                 path="/itemDetail/:id"
                 element={
                   <LayoutPublic>
                     <ItemDetailContainer/>
-                  </LayoutPublic>}
-                />
+                  </LayoutPublic>
+                } 
+              />
 
               <Route
                 path="/category/:categoryName"
                 element={
-                  
-                  <LayoutPublic>
-                    <ItemListContainer/>
-                  </LayoutPublic>
-                }
-                />
+                <LayoutPublic>
+                   <ItemListContainer/>
+                </LayoutPublic>
+               }
+             />
 
               <Route 
                 path="*" 
                 element={<h1> error 404: Not found </h1>} 
               />
-            
+             
+              <Route
+                path="/form"
+                element={
+                <LayoutPublic>
+                   <Formulario/>
+                </LayoutPublic>
+               }
+             />
         
             </Routes>
           </CartContextProvider>
